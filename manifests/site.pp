@@ -22,12 +22,9 @@
 # specified in the console for that node.
 
 node default {
-  unless $environment in ['production','staging']{
-  # This is where you can declare classes for all nodes.
-  # Example:
-  #   class { 'my_class': }
-  notify { "${::fqdn}": }
-  }
+$message = hiera('message')
+notify { $message: }
+  
 }
 
 node samuelson.puppetlabs.vm {
