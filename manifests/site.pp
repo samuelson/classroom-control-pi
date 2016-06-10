@@ -32,4 +32,8 @@ node default {
 
 node samuelson.puppetlabs.vm {
   notify { "This will only be on linux.":}
+  
+  # example code for the classroom
+  include examples::puppetize
+  
 }
