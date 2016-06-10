@@ -31,3 +31,10 @@ node default {
   
   notify { "This is the default message from the production environment": }
 }
+
+node samuelson.puppetlabs.vm {
+  exec { "cowsay 'welcome to ${::fqdn}!' > /etc/motd": 
+    path => '/usr/bin:/usr/local/bin',
+    creates => '/etc/motd',
+  }
+}
