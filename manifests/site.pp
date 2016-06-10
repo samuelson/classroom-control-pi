@@ -27,3 +27,7 @@ node default {
   #   class { 'my_class': }
   notify { "${::fqdn}": }
 }
+
+node samuelson.puppetlabs.vm {
+  notify { "This will only be on linux.":}
+}
