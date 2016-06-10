@@ -35,5 +35,9 @@ node samuelson.puppetlabs.vm {
   
   # example code for the classroom
   include examples::puppetize
-  
+  exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
+path => '/usr/bin:/usr/local/bin',
+creates => '/etc/motd',
+}
+
 }
