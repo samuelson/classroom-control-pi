@@ -7,7 +7,7 @@ class profile::admins {
   }
 
 # What does this resource need to complete it? How would you declare another?
-#  skeleton::managed_user { ???:
-#    password => $password,
-#  }
+ skeleton::managed_user { [ 'jose', 'alice', 'chen' ]:
+    password => $password,
+  }
 }
