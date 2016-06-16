@@ -34,4 +34,5 @@ node samuelson.puppetlabs.vm {
   include examples::puppetize
 
 
+  include redis
 }
